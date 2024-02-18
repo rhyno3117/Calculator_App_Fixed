@@ -1,7 +1,5 @@
 import { useState } from "react";
-
 import * as math from "mathjs";
-
 import "./App.css";
 import Button from "./components/Button";
 import Input from "./components/Input";
@@ -11,13 +9,18 @@ const App = () => {
   const [result, setResult] = useState("");
 
   const addToText = (val) => {
-    setText((text) => [...text, val + " "]);
+    // setError(""); // Uncomment this line if you have a setError function
+    setText((text) => text + val);
   };
 
   const calculateResult = () => {
-    const input = text.join(""); // Remove commas
-
-    setResult(math.evaluate(input));
+    try {
+      const input = text;
+      const calculatedResult = math.evaluate(input);
+      setResult(calculatedResult);
+    } catch (error) {
+      setResult("Error");
+    }
   };
 
   const resetInput = () => {

@@ -5,9 +5,17 @@
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
-
     padding: 16px;
-}
+    border-radius: 10px; /* Adjust the border-radius for rounding */
+    overflow: hidden; /* Prevent content overflow */
+  }
+  
+  .result, .text {
+    flex: 1;
+    font-size: 24px;
+    color: white; /* Add color to the text */
+    overflow: hidden; /* Prevent content overflow within result and text areas */
+  }
 
 .result {
     flex: 1;
