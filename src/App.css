@@ -36,3 +36,15 @@ body {
     width: 100%;
   }
 }
+
+@media (max-width: 568px) {
+  .calc-wrapper {
+    width: 25rem;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 568px) {
+  .calc-wrapper {
+    width: 25rem; /* or set it to a different value that suits your design */
+  }
+}
