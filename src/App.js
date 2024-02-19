@@ -39,10 +39,7 @@ const App = () => {
     } catch (error) {
       setResult("Error");
     }
-  };
-  
-  
-  
+  };  
 
   const resetInput = () => {
     setText("");
