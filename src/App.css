@@ -31,24 +31,12 @@ body {
 }
 
 
+
+
 /* For screens with a maximum width of 600px */
-@media (max-width: 600px) {
+/* @media (max-width: 600px) {
   .calc-wrapper {
     width: 100%;
   }
-}
-
-/* For screens with a minimum width of 568px and a maximum width of 600px */
-@media (min-width: 568px) and (max-width: 600px) {
-  .calc-wrapper {
-    width: 25rem;
-  }
-}
-
-/* For screens with a minimum width of 300px and a maximum width of 568px */
-@media (min-width: 300px) and (max-width: 568px) {
-  .calc-wrapper {
-    width: 25rem;
-  }
-}
+} */
 
