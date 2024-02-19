@@ -33,6 +33,7 @@ body {
 
 @media (max-width: 375px) {
   .calc-wrapper {
+    display: flex;
     width: 100rem; /* Width for screens with a width of 375px or below */
   }
 }
