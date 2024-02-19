@@ -33,7 +33,6 @@ body {
 
 @media only screen and (max-width: 600px) {
   .calc-wrapper {
-    max-width: none; /* Remove the maximum width on smaller screens */
-    border: 0; /* Remove the border on smaller screens */
+  background: silver;
   }
 }
