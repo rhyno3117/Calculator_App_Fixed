@@ -16,12 +16,33 @@ const App = () => {
   const calculateResult = () => {
     try {
       const input = text;
-      const calculatedResult = math.evaluate(input);
-      setResult(calculatedResult);
+      let calculatedResult = math.evaluate(input);
+  
+      // Convert the result to a string and limit to 10 characters
+      let formattedResult = String(calculatedResult).slice(0, 10);
+  
+      // Check if the result is in scientific notation
+      if (formattedResult.includes('e')) {
+        const parts = formattedResult.split('e');
+        const mantissa = parts[0].slice(0, 6); // Adjust the length as needed
+        const exponent = parts[1];
+        formattedResult = mantissa + 'e' + exponent;
+      } else if (formattedResult.includes('.')) {
+        // Check if the result includes a decimal point
+        const parts = formattedResult.split('.');
+        const integerPart = parts[0].slice(0, 5); // Adjust the length as needed
+        const decimalPart = parts[1].slice(0, 4); // Adjust the length as needed
+        formattedResult = integerPart + '.' + decimalPart;
+      }
+  
+      setResult(formattedResult);
     } catch (error) {
       setResult("Error");
     }
   };
+  
+  
+  
 
   const resetInput = () => {
     setText("");

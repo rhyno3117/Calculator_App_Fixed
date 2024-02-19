@@ -12,6 +12,7 @@
   
   .result, .text {
     flex: 1;
+    margin: 1;
     font-size: 24px;
     color: white; /* Add color to the text */
     overflow: hidden; /* Prevent content overflow within result and text areas */
