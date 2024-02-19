@@ -22,19 +22,6 @@ body {
 .calc-wrapper {
   background-color: black;
   width: 400px;
-  min-width: 300px; /* Minimum width to prevent it from becoming too small */
-
-
-   /* Media Query for smaller screens (adjust max-width as needed) */
-   @media (max-width: 768px) {
-    width: 90%; /* Adjusted width for smaller screens */
-  }
-
-  /* Media Query for even smaller screens (adjust max-width as needed) */
-  @media (max-width: 480px) {
-    width: 95%; /* Further adjusted width for even smaller screens */
-  }
-
   border-radius: 16px;
   border: 5px solid #00abf0; /* Adjust the border width as needed */
 }
@@ -45,3 +32,44 @@ body {
 
 
 
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: radial-gradient(ellipse at 50% 50%, rgba(210, 26, 26, 1) 0%, rgba(130, 130, 130, 1) 0%, rgba(255, 255, 255, 1) 100%);
+}
+
+.App {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.calc-wrapper {
+  background-color: black;
+  width: 400px;
+  border-radius: 16px;
+  border: 5px solid #00abf0; /* Adjust the border width as needed */
+}
+
+.row {
+  display: flex;
+}
+
+
+
+/* For screens with a maximum width of 600px or below */
+@media (max-width: 600px) {
+  .calc-wrapper {
+    width: 25rem;
+  }
+}
