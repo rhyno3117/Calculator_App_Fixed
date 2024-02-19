@@ -33,6 +33,6 @@ body {
 
 @media (max-width: 375px) {
   .calc-wrapper {
-    width: 25rem; /* Width for screens with a width of 375px or below */
+    width: 100rem; /* Width for screens with a width of 375px or below */
   }
 }
